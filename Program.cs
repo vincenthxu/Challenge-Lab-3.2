@@ -6,18 +6,11 @@
         {
             if(args.Length > 0)
             {
-                foreach(var arg in args)
-                {
-                    Console.WriteLine($"{arg} : {SumDigitsInString(arg)}");
-                }
+                TestInput(args);
             }
             else
             {
-                string[] strings = { "1q2w3e", "L0r3m.1p5um" };
-                foreach(string s in strings)
-                {
-                    Console.WriteLine($"{s} : {SumDigitsInString(s)}");
-                }
+                TestInput([ "1q2w3e", "L0r3m.1p5um" ]);
             }
         }
 
@@ -30,6 +23,14 @@
                     sum++;
             }
             return sum;
+        }
+
+        static void TestInput(string[] input)
+        {
+            foreach(string s in input)
+            {
+                Console.WriteLine($"{s} : {SumDigitsInString(s)}");
+            }
         }
     }
 }
