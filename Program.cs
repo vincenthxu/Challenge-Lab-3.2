@@ -20,7 +20,9 @@
             foreach (char c in s)
             {
                 if (Char.IsAsciiDigit(c))
-                    sum++;
+                {
+                    sum += int.Parse($"{c}");
+                }
             }
             return sum;
         }
